@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.urls import include, path
 from rest_framework import routers
+from service.list_api.views import ListItemViewSet
 from service.user_api import views
 
 router = routers.DefaultRouter()
+router.register(r'list-items', ListItemViewSet)
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 
