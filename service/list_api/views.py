@@ -9,3 +9,8 @@ class ListItemViewSet(viewsets.ModelViewSet):
     serializer_class = ListItemSerializer
     permission_classes = [IsAuthenticated]
 
+    def get_queryset(self):
+        return ListItem.objects.filter(user=self.request.user).order_by('position')
+    
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
