@@ -7,7 +7,7 @@ class ListItem(models.Model):
    name = models.CharField(max_length = 180)
    position = models.IntegerField(unique = True)
    completed = models.BooleanField(default = False)
-   user = models.ForeignKey(User, on_delete = models.CASCADE)
+#   user = models.ForeignKey(User, on_delete = models.CASCADE)
 
    def __str__(self):
       return self.name
