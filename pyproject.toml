@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "list-service"
+version = "0.1.0"
+description = "An API for managing lists."
+authors = ["Oliver <oliver.nic012@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "^4.2.6"
+djangorestframework = "^3.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
